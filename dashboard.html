@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Águia Sport Club - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-body">
+    <header class="header">
+        <div class="header-left">
+            <button class="back-btn" onclick="window.location.href='index.html'"><i class="fas fa-arrow-left"></i></button>
+            <img src="images/logo.png" alt="Águia Sport Club Logo" class="header-logo">
+        </div>
+        <nav class="nav-menu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="player-profile.html">Jogadores</a>
+            <a href="staff-list.html">Equipe</a>
+            <a href="about.html">Sobre</a>
+            <a href="logout.html" class="logout-btn">Sair <i class="fas fa-sign-out-alt"></i></a>
+        </nav>
+    </header>
+    <main class="dashboard-main">
+        <div class="team-selection">
+            <button class="titular-btn">Titular</button>
+            <div class="bench-section">
+                <h2>Banco de Reservas</h2>
+                <div class="subs-grid">
+                    <button class="sub-btn" onclick="filterPlayers('Sub-13')">Sub-13</button>
+                    <button class="sub-btn" onclick="filterPlayers('Sub-15')">Sub-15</button>
+                    <button class="sub-btn" onclick="filterPlayers('Sub-17')">Sub-17</button>
+                    <button class="sub-btn" onclick="filterPlayers('Sub-20')">Sub-20</button>
+                </div>
+            </div>
+            <div class="player-grid" id="playerGrid">
+                <div class="player-card">Sophia S. Caputo</div>
+                <div class="player-card">Jogador 2</div>
+                <div class="player-card">Jogador 3</div>
+                <div class="player-card">Jogador 4</div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Águia Sport Club. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

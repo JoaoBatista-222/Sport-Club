@@ -1,0 +1,649 @@
+/* ==========================================================================
+   Reset e Base
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #1C2437 0%, #B63C43 100%);
+    color: #333;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Login e Sign Up Pages
+   ========================================================================== */
+.login-body,
+.signup-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.login-container,
+.signup-container {
+    display: flex;
+    background: #F6F5F6;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 950px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.logo-section {
+    background: #B63C43;
+    width: 300px;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.club-logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.form-section {
+    padding: 50px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-section h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #1C2437;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.already-registered,
+.forgot-password {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #666;
+}
+
+.already-registered a,
+.forgot-password,
+.register-link {
+    color: #B63C43;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-link {
+    display: block;
+    margin-top: 10px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #E0E0E0;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #B63C43;
+    outline: none;
+    box-shadow: 0 0 5px rgba(182, 60, 67, 0.2);
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end; /* Alinha botões à direita */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.submit-btn,
+.google-btn {
+    background: #B63C43;
+    color: #F6F5F6;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.submit-btn:hover,
+.google-btn:hover {
+    transform: scale(1.1);
+}
+
+.google-btn {
+    background: #F6F5F6;
+    border: 2px solid #B63C43;
+    color: #B63C43;
+}
+
+.google-btn i {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Header (Common Across Pages)
+   ========================================================================== */
+.header {
+    background: #1C2437;
+    color: #F6F5F6;
+    padding: 10px 20px; /* Aumentei para dar mais espaço, ajuste se necessário */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    max-width: 50px; /* Aumentei para destacar, ajuste conforme imagem */
+    height: auto;
+    margin: 0 15px; /* Espaçamento simétrico */
+}
+
+.nav-menu {
+    display: flex;
+    gap: 15px; /* Aumentei o espaçamento entre itens */
+}
+
+.nav-menu a {
+    color: #F6F5F6;
+    font-size: 1em; /* Aumentei para legibilidade, ajuste se necessário */
+    font-weight: 600;
+    padding: 8px 15px; /* Aumentei para melhor clique */
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.nav-menu a:hover {
+    background: rgba(246, 245, 246, 0.1);
+}
+
+.logout-btn {
+    background: #B63C43;
+    padding: 8px 15px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.logout-btn:hover {
+    opacity: 0.9;
+}
+
+.logout-btn i {
+    margin-left: 5px;
+}
+
+/* Resto do CSS permanece igual, apenas o Header foi ajustado */
+
+/* ==========================================================================
+   Dashboard Page
+   ========================================================================== */
+.dashboard-main {
+    padding: 80px 20px 20px;
+    text-align: center;
+}
+
+.team-selection {
+    background: #F6F5F6;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.titular-btn {
+    background: #B63C43;
+    color: #F6F5F6;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.titular-btn:hover {
+    opacity: 0.9;
+}
+
+.bench-section h2 {
+    color: #1C2437;
+    margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: 700;
+}
+
+.subs-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.sub-btn {
+    background: #F6F5F6;
+    color: #B63C43;
+    padding: 10px 25px;
+    border: 2px solid #B63C43;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.sub-btn:hover {
+    background: #B63C43;
+    color: #F6F5F6;
+}
+
+.player-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.player-card {
+    background: #B63C43;
+    padding: 15px;
+    border-radius: 10px;
+    color: #F6F5F6;
+    width: 120px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    transition: transform 0.2s;
+    margin-bottom: 15px;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ==========================================================================
+   Profile Pages (Player and Staff)
+   ========================================================================== */
+.profile-container {
+    padding: 80px 20px 20px;
+    text-align: center;
+}
+
+.profile-img {
+    display: block;
+    margin: 0 auto 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #F6F5F6;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container h1 {
+    font-size: 1.8em;
+    color: #1C2437;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.info-section p {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #444;
+}
+
+.tabs {
+    display: flex;
+    margin: 15px 0;
+    background: #E0E0E0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    background: #E0E0E0;
+    color: #1C2437;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.tab-btn.active {
+    background: #B63C43;
+    color: #F6F5F6;
+}
+
+.tab-content {
+    background: #F6F5F6;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-form .input-group {
+    margin-bottom: 10px;
+}
+
+.edit-form input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #E0E0E0;
+    font-size: 1em;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.edit-btn,
+.save-btn {
+    background: #B63C43;
+    color: #F6F5F6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.edit-btn:hover,
+.save-btn:hover {
+    opacity: 0.9;
+}
+
+/* ==========================================================================
+   Staff List Page
+   ========================================================================== */
+.staff-main {
+    padding: 80px 20px 20px;
+    text-align: center;
+}
+
+.staff-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.staff-card {
+    background: #F6F5F6;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+}
+
+.staff-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #F6F5F6;
+}
+
+.staff-card h3 {
+    color: #1C2437;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.staff-card p {
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.view-btn {
+    color: #B63C43;
+    font-weight: 600;
+    font-size: 1em;
+    padding: 8px 15px;
+    border: 2px solid #B63C43;
+    border-radius: 15px;
+}
+
+.view-btn:hover {
+    background: #B63C43;
+    color: #F6F5F6;
+}
+
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+.about-main {
+    padding: 80px 20px 20px;
+    text-align: center;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #F6F5F6;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.about-content .club-logo-large {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+.about-content h1 {
+    font-size: 2.5em;
+    color: #1C2437;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   Logout and Error Pages
+   ========================================================================== */
+.logout-container,
+.error-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px;
+    background: #F6F5F6;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.logout-container h1,
+.error-container h1 {
+    font-size: 2.5em;
+    color: #1C2437;
+    margin-bottom: 20px;
+}
+
+.logout-container p,
+.error-container p {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.link-btn {
+    display: inline-block;
+    margin-top: 20px;
+    color: #B63C43;
+    font-size: 0.9em;
+    padding: 10px 20px;
+    border: 2px solid #B63C43;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.link-btn:hover {
+    background: #B63C43;
+    color: #F6F5F6;
+}
+
+/* ==========================================================================
+   Footer (Common Across Pages)
+   ========================================================================== */
+.footer {
+    background: #1C2437;
+    color: #F6F5F6;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+@media (max-width: 768px) {
+    .login-container,
+    .signup-container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+
+    .logo-section {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .form-section {
+        padding: 30px;
+    }
+
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header-left {
+        margin-bottom: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .team-selection,
+    .profile-container,
+    .about-content,
+    .logout-container,
+    .error-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .subs-grid,
+    .player-grid,
+    .staff-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .player-card,
+    .staff-card {
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 15px;
+    }
+
+    .footer {
+        position: relative;
+        margin-top: 20px;
+    }
+}

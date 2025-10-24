@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Águia Sport Club - Perfil de Jogador</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="profile-body">
+    <header class="header">
+        <div class="header-left">
+            <button class="back-btn" onclick="window.location.href='dashboard.html'"><i class="fas fa-arrow-left"></i></button>
+            <img src="images/logo.png" alt="Águia Sport Club Logo" class="header-logo">
+        </div>
+        <nav class="nav-menu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="player-profile.html">Jogadores</a>
+            <a href="staff-list.html">Equipe</a>
+            <a href="about.html">Sobre</a>
+            <a href="logout.html" class="logout-btn">Sair <i class="fas fa-sign-out-alt"></i></a>
+        </nav>
+    </header>
+    <main class="profile-container">
+        <img src="images/player-sophia.jpg" alt="Sophia" class="profile-img">
+        <h1>Informações Pessoais</h1>
+        <div class="info-section">
+            <p><strong>Nome completo:</strong> Sophia Santiago Caputo</p>
+            <p><strong>Idade:</strong> 24 anos</p>
+            <p><strong>Data de nascimento:</strong> 07/01/2001</p>
+            <p><strong>Posição:</strong> Atacante</p>
+        </div>
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showTab('personal')">Dados Pessoais</button>
+            <button class="tab-btn" onclick="showTab('psycho')">Psicológica</button>
+            <button class="tab-btn" onclick="showTab('tech')">Técnica</button>
+        </div>
+        <div id="personal" class="tab-content active">
+            <h2>Avaliação Psicológica</h2>
+            <p>Temperamento: Extrovertida, otimista.</p>
+        </div>
+        <div id="psycho" class="tab-content">
+            <h2>Ficha Psicológica</h2>
+            <p>Controle Emocional: Bom.</p>
+            <p>Resiliência: Alta.</p>
+        </div>
+        <div id="tech" class="tab-content">
+            <h2>Ficha Técnica</h2>
+            <p>Estatísticas 2025: 7 jogos, 563 min, 5 gols.</p>
+            <p>Histórico: Fluminense (2022-2023).</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Águia Sport Club. Todos os direitos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

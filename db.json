@@ -1,0 +1,20 @@
+{
+  "staff": [
+    {
+      "id": 1,
+      "name": "Felipe Galídio",
+      "email": "felipe.galidio@aguia.com",
+      "birthdate": "1988-06-26",
+      "role": "Treinador",
+      "username": "@felipe.galidio"
+    }
+  ],
+  "players": [
+    {
+      "id": 1,
+      "name": "João Silva",
+      "position": "Atacante",
+      "number": 11
+    }
+  ]
+}
