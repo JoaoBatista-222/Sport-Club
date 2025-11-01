@@ -1,17 +1,25 @@
-// Configuração do Firebase (substitua pelos seus valores)
 const firebaseConfig = {
-    apiKey: "SEU_API_KEY",
-    authDomain: "SEU_AUTH_DOMAIN",
-    projectId: "SEU_PROJECT_ID",
-    storageBucket: "SEU_STORAGE_BUCKET",
-    messagingSenderId: "SEU_MESSAGING_SENDER_ID",
-    appId: "SEU_APP_ID"
+  apiKey: "AIzaSyDOBPL9fkSQST6-XaXGPLdtz_LWWhU7d0w",
+  authDomain: "sport-club-1b9e5.firebaseapp.com",
+  databaseURL: "https://sport-club-1b9e5-default-rtdb.firebaseio.com",
+  projectId: "sport-club-1b9e5",
+  storageBucket: "sport-club-1b9e5.firebasestorage.app",
+  messagingSenderId: "854453548372",
+  appId: "1:854453548372:web:3d33cd08ebfdcc852b84c1",
+  measurementId: "G-QV34JTLDR7"
 };
 
 // Inicializar Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const database = firebase.database();
+
+
+auth.onAuthStateChanged(function(user) {
+  if (!user) {
+    window.location.href = 'index.html'; // Redireciona se não estiver logado
+  }
+});
 
 // Login com Google
 document.getElementById('googleSignIn')?.addEventListener('click', () => {
@@ -119,12 +127,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Filtro de Jogadores (Placeholder)
+// Filtro de Jogadores 
 function filterPlayers(category) {
-    const playerGrid = document.getElementById('playerGrid');
-    playerGrid.innerHTML = `<div class="player-card">${category} - Sophia S. Caputo</div>`;
-    // Adicione lógica para carregar jogadores do Firebase ou array
+  const playerGrid = document.getElementById('playerGrid');
+  playerGrid.innerHTML = '<p>Carregando...</p>'; // Feedback de loading
+
+  database.ref('players/' + category).once('value')
+    .then(snapshot => {
+      let html = '';
+      snapshot.forEach(child => {
+        html += `<div class="player-card">${child.val().name}</div>`;
+      });
+      playerGrid.innerHTML = html || '<p>Nenhum jogador cadastrado.</p>';
+    })
+    .catch(error => {
+      playerGrid.innerHTML = `<p>Erro ao buscar jogadores: ${error.message}</p>`;
+    });
 }
+
 
 // Navegação de Tabs
 function showTab(tabName) {
@@ -249,3 +269,16 @@ function registrarPagamento(mes) {
   .catch((error) => alert("Erro ao registrar pagamento: " + error.message));
 }
 //<button onclick="registrarPagamento('2025-10')">Registrar Pagamento</button>
+
+window.addEventListener('DOMContentLoaded', function() {
+  filterPlayers('Sub-15'); // Exibe jogadores da Sub-15 assim que abre
+});
+
+// Supondo que o botão tem classe "titular-btn"
+document.querySelector('.titular-btn').addEventListener('click', function() {
+  const players = document.querySelectorAll('.player-card');
+  players.forEach(card => {
+    card.classList.toggle('titular');
+  });
+});
+

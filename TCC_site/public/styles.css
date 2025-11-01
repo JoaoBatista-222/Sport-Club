@@ -19,6 +19,12 @@ a {
     text-decoration: none;
 }
 
+.player-card.titular {
+  border: 2px solid gold;
+  background: #ffe066;
+}
+
+
 /* ==========================================================================
    Login e Sign Up Pages
    ========================================================================== */
