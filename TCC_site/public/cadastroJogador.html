@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Águia Sport Club - Cadastro de Jogador</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="cadastro-body">
+
+  <header class="header">
+    <!-- Pode copiar o menu padrão igual aos outros arquivos -->
+    <div class="header-left">
+      <img src="images/logo.png" alt="Águia Sport Club Logo" class="header-logo">
+    </div>
+    <nav class="nav-menu">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="player-profile.html">Jogadores</a>
+      <a href="staff-list.html">Equipe</a>
+      <a href="about.html">Sobre</a>
+      <a href="logout.html" class="logout-btn">Sair <i class="fas fa-sign-out-alt"></i></a>
+    </nav>
+  </header>
+
+  <main class="cadastro-container">
+    <h1>Cadastrar Novo Jogador</h1>
+    <form id="cadastroJogadorForm">
+      <div class="input-group">
+        <label for="nome">Nome do jogador</label>
+        <input type="text" id="nome" placeholder="Nome do jogador" required>
+      </div>
+      <div class="input-group">
+        <label for="idade">Idade</label>
+        <input type="number" id="idade" placeholder="Idade" required>
+      </div>
+      <div class="input-group">
+        <label for="nascimento">Data de nascimento</label>
+        <input type="text" id="nascimento" placeholder="Data de nascimento" required>
+      </div>
+      <div class="input-group">
+        <label for="posicao">Posição</label>
+        <input type="text" id="posicao" placeholder="Posição" required>
+      </div>
+      <div class="input-group">
+        <label for="foto">URL da foto</label>
+        <input type="text" id="foto" placeholder="URL da foto">
+      </div>
+      <button type="submit">Cadastrar Jogador</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Águia Sport Club. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Inclua scripts abaixo -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js"></script>
+  <script src="Funcoes.js"></script>
+</body>
+</html>
